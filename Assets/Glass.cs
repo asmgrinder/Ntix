@@ -36,6 +36,11 @@ public class Glass : MonoBehaviour
 	protected float timeToRotate = 0;
 	protected float timeToMirror = 0;
 	
+	protected float keyboardDelay = 0.1f;
+	protected float keyboardTime = 0;
+	
+	protected bool paused = false;
+	
 	protected const int scoreWeight = 10; 
 	protected int score = 0;
 	
@@ -267,6 +272,19 @@ public class Glass : MonoBehaviour
 	
 	protected void gameLogic()
 	{
+		keyboardTime += Time.deltaTime;
+		if (keyboardTime > keyboardDelay
+			&& (Input.GetKey(KeyCode.Pause)
+				|| Input.GetKey(KeyCode.F1)))
+		{
+			keyboardTime = 0;
+			paused = !paused;
+		}
+		if (paused)
+		{
+			return;
+		}
+		
 		timeToFall -= Time.deltaTime;
 		timeToRotate = Mathf.Max(0, timeToRotate - Time.deltaTime);
 		timeToMirror = Mathf.Max(0, timeToMirror - Time.deltaTime);

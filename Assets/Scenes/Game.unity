@@ -283,7 +283,10 @@ MonoBehaviour:
 
     Tab - mirror
 
-'
+    Pause/F1 - pause
+
+    Esc
+    - menu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -346,7 +349,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 7.105255, y: 6.420105, z: 15.538879, w: -41.041748}
+  m_margin: {x: 7.105255, y: 6.420105, z: -85.89844, w: -57.73398}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
