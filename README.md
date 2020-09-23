@@ -1,2 +1,2 @@
 # Ntix
-Tetris like game
+Tetris like game, but more difficult.
