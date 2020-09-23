@@ -112,6 +112,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
     Assets/Scenes/Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -288,7 +290,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 2ae450646cbc293403fa08a5215e4edc
+      Hash: 0dd87fbdb8d609573490ca54129e5108
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Glass
@@ -926,4 +928,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: /home/hyper_cube/Unity/projects/Ntix/build/Win32/Ntix.exe
+  playerPath: /home/hyper_cube/projects/Ntix/build/Win32/Ntix.exe
