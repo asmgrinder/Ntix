@@ -112,6 +112,33 @@ public class Figure : MonoBehaviour
 	
 	public void Mirror()
 	{
+		bool initialized = false;
+		Vector2Int ul = new Vector2Int(0, 0);	// upper left
+		Vector2Int lr = new Vector2Int(0, 0);	// lower right
+		for (int j = 0; j < GetHeight(); j++)
+		{
+			for (int i = 0; i < GetWidth(); i++)
+			{
+				if (!IsEmpty(i, j))
+				{
+					if (initialized)
+					{
+						ul.x = Mathf.Min(ul.x, i);
+						ul.y = Mathf.Min(ul.y, j);
+						lr.x = Mathf.Max(lr.x, i);
+						lr.y = Mathf.Max(lr.y, j);
+					}
+					else
+					{
+						ul = new Vector2Int(i, j);
+						lr = new Vector2Int(i, j);
+						initialized = true;
+					}
+				}
+			}
+		}
+		Vector2 bp = 0.5f * new Vector2(ul.x + lr.x, ul.y + lr.y);
+// 		Debug.Log("Mirror:" + bp);//.x + ", " + bp.y);
 		prevArray = array;
 		GameObject[,] newArray = new GameObject[GetWidth(), GetHeight()];
 		for (int j = 0; j < GetHeight(); j++)
@@ -120,7 +147,10 @@ public class Figure : MonoBehaviour
 			{
 				if (!IsEmpty(i, j))
 				{
-					newArray[round(2 * basePoint.x - i), j] = array[i, j];
+					int newI = round(2 * bp.x - i);
+					int newJ = j;
+					newArray[newI, newJ] = array[i, j];
+// 					Debug.Log("Mirror: (" + i + ", " + j + ") -> (" + newI + ", " + newJ + ")");
 				}
 			}
 		}
@@ -129,6 +159,7 @@ public class Figure : MonoBehaviour
 	
 	public void Rotate()
 	{
+// 		Debug.Log("Rotate:" + basePoint);//.x + ", " + basePoint.y
 		prevArray = array;
 		GameObject[,] newArray = new GameObject[GetHeight(), GetWidth()];
 		for (int j = 0; j < GetHeight(); j++)
@@ -137,9 +168,10 @@ public class Figure : MonoBehaviour
 			{
 				if (!IsEmpty(i, j))
 				{
-					int newI = round(basePoint.x - (j - basePoint.y));
-					int newJ = round(basePoint.y + (i - basePoint.x));
-					newArray[newI, newJ] = array[i, j];
+					float ni = basePoint.x - (j - basePoint.y);
+					float nj = basePoint.y + (i - basePoint.x);
+// 					Debug.Log("Rotate: (" + new Vector2(i, j) + " -> " + new Vector2(ni, nj));
+					newArray[round(ni), round(nj)] = array[i, j];
 				}
 			}
 		}
