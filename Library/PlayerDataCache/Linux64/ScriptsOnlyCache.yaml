@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Figure
     - Glass
     - MainMenu
+    - NightSky
     Unity.Postprocessing.Runtime.dll:
     - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
     - UnityEngine.Rendering.PostProcessing.AutoExposure
@@ -98,6 +99,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14076}
     - Class: 114
       Script: {instanceID: 14164}
+    - Class: 114
+      Script: {instanceID: 16086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -924,6 +927,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NightSky
   platform: 24
   scenePathNames:
   - Assets/Scenes/Menu.unity
