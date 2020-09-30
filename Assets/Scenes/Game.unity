@@ -604,10 +604,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabArr:
-  - {fileID: 919132149155446097, guid: 4164240f1c1c8523bb1f4dbd1cc0f4ba, type: 3}
-  - {fileID: 919132149155446097, guid: 8a4f3c64fa6479ac2a5522aa70f76637, type: 3}
-  - {fileID: 919132149155446097, guid: be0336e0ce8cd16ee94d415bdc505e95, type: 3}
-  - {fileID: 919132149155446097, guid: 9cf59c768f3f0d7bdaa216b7bf893058, type: 3}
+  - {fileID: 919132149155446097, guid: 1d9d97b216817e7be9e4f473cab35689, type: 3}
+  - {fileID: 919132149155446097, guid: 96c6cfe342c63b778b9926a1bca71ddf, type: 3}
+  - {fileID: 919132149155446097, guid: 58dc758ec8a1a12e28ad342337a0ec1d, type: 3}
+  - {fileID: 919132149155446097, guid: 8dfdfd8450d500fe69245953482bdadb, type: 3}
   cubeSize: 2
 --- !u!4 &629359288
 Transform:
