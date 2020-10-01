@@ -774,9 +774,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 11a410bfa1c901aeb9c5e38d3bfb74d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aabd65db09659cfbbab3917b19912c37, type: 2}
     - target: {fileID: 919132149155446097, guid: 11a410bfa1c901aeb9c5e38d3bfb74d5, type: 3}
       propertyPath: m_Name
       value: Glass Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11a410bfa1c901aeb9c5e38d3bfb74d5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 11a410bfa1c901aeb9c5e38d3bfb74d5, type: 3}
       propertyPath: m_StaticEditorFlags
